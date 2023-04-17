@@ -2,6 +2,8 @@ import { useState } from "react";
 import ReactDOM from "react-dom/client";
 import QRCode from "react-qr-code";
 import { renderSvgAsImage, setDomRenderer } from "react-svg-image";
+import { XMarkIcon } from "@heroicons/react/24/outline";
+
 import "./App.css";
 
 async function renderAsPromise(el, domEl) {
@@ -54,15 +56,23 @@ function App() {
         </form>
       </div>
       {show ? (
-        <div className="modal absolute backdrop-blur-lg bg-white/30 h-2/4 w-3/12 rounded-lg flex items-center justify-center flex-col">
-          <img src={img} alt="generated qr image" />
-          <a
-            href={img}
-            download="qrcode.png"
-            className="bg-cyan-800 hover:bg-cyan-600 text-white font-semibold py-2 px-4 rounded-md mt-12"
-          >
-            Download
-          </a>
+        <div className="modal absolute backdrop-blur-lg bg-white/30 h-2/4 w-3/12 rounded-lg">
+          <div className="flex items-center justify-center flex-col relative h-full">
+            <XMarkIcon
+              className="w-8 absolute top-5 left-5 text-white hover:scale-125 cursor-pointer transition ease-in-out duration-150"
+              onClick={() => {
+                setShow(false);
+              }}
+            />
+            <img src={img} alt="generated qr image" />
+            <a
+              href={img}
+              download="qrcode.png"
+              className="bg-cyan-800 hover:bg-cyan-600 text-white font-semibold py-2 px-4 rounded-md mt-12"
+            >
+              Download
+            </a>
+          </div>
         </div>
       ) : (
         <></>
