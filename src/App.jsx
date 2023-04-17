@@ -33,9 +33,9 @@ function App() {
 
   return (
     <main className="bg-gradient-radial from-cyan-800  to-slate-700 min-h-screen w-screen flex items-center justify-center flex-col">
-      <h1 className="text-white mb-28 font-bold text-6xl">QR Code Generator</h1>
-      <div className="container mx-auto bg-slate-200 rounded-lg p-20">
-        <form onSubmit={(e) => generateImage(e)}>
+      <h1 className="text-white mb-28 font-bold text-3xl sm:text-5xl lg:text-6xl">QR Code Generator</h1>
+      <div className="container mx-aut">
+        <form onSubmit={(e) => generateImage(e)} className="bg-slate-200 rounded-lg p-5 sm:p-10 lg:p-20 mx-5">
           <div className="mt-2">
             <input
               type="text"
@@ -56,7 +56,7 @@ function App() {
         </form>
       </div>
       {show ? (
-        <div className="modal absolute backdrop-blur-lg bg-white/30 h-2/4 w-3/12 rounded-lg">
+        <div className="modal absolute backdrop-blur-lg bg-white/30 h-5/6 lg:h-2/4 w-11/12 lg:w-1/3 rounded-lg">
           <div className="flex items-center justify-center flex-col relative h-full">
             <XMarkIcon
               className="w-8 absolute top-5 left-5 text-white hover:scale-125 cursor-pointer transition ease-in-out duration-150"
