@@ -45,9 +45,9 @@ function App() {
         <div></div>
         <div></div>
       </div>
-      <h1 className="text-white mb-28 font-bold text-3xl sm:text-5xl lg:text-6xl">QR Code Generator</h1>
+      <h1 className="text-white mb-28 text-3xl sm:text-5xl md:text-7xl lg:text-8xl">QR Code Generator</h1>
       <div className="container mx-auto relative z-10">
-        <form onSubmit={(e) => generateImage(e)} className="bg-slate-200 shadow-lg rounded-lg p-5 sm:p-10 lg:p-20 mx-5">
+        <form onSubmit={(e) => generateImage(e)} className="bg-color shadow-lg rounded-lg p-5 sm:p-10 lg:p-20 mx-5">
           <div className="mt-2">
             <input
               type="text"
@@ -58,7 +58,7 @@ function App() {
               placeholder="Enter a valid url starting with http(s)"
               className="block w-full rounded-md border-0 p-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-cyan-600 sm:text-sm sm:leading-6"
             />
-            <div className="flex justify-end">
+            <div className="flex justify-end select-none">
               <input
                 type="reset"
                 value="clear"
@@ -69,7 +69,7 @@ function App() {
           <div className="flex items-center justify-center">
             <button
               type="submit"
-              className="bg-cyan-800 text-xl hover:bg-cyan-600 text-white font-semibold py-2 px-4 rounded-md mt-5"
+              className="select-none text-2xl hover:text-cyan-950 text-white font-semibold py-2 px-4 rounded-md mt-5"
             >
               Generate
             </button>
@@ -89,7 +89,7 @@ function App() {
             <a
               href={img}
               download="qrcode.png"
-              className="bg-cyan-800 text-xl hover:bg-cyan-600 text-white font-semibold py-2 px-4 rounded-md mt-12"
+              className="select-none bg-cyan-800 text-xl hover:bg-cyan-950 text-white font-semibold py-2 px-4 rounded-md mt-12"
             >
               Download
             </a>

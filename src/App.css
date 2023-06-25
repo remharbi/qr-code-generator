@@ -98,3 +98,12 @@ h1 {
     animation-delay: 0s;
     animation-duration: 11s;
 }
+
+
+.bg-color {
+  background-color: rgb(226 232 240 / 0.2);
+}
+
+button, [type='reset']{
+  color: white;
+}
